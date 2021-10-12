@@ -2,9 +2,9 @@
 
 pragma solidity 0.6.12;
 
-import "OpenZeppelin/openzeppelin-contracts@3.4.0/contracts/token/ERC20/SafeERC20.sol";
-import "OpenZeppelin/openzeppelin-contracts@3.4.0/contracts/math/SafeMath.sol";
-import 'OpenZeppelin/openzeppelin-contracts-upgradeable@3.4.0/contracts/utils/ReentrancyGuardUpgradeable.sol';
+import "@openzeppelin/contracts/token/ERC20/SafeERC20.sol";
+import "@openzeppelin/contracts/math/SafeMath.sol";
+import '@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol';
 import "./OwnerPausableUpgradeable.sol";
 import "./MetaSwapUtils.sol";
 import "./MathUtils.sol";

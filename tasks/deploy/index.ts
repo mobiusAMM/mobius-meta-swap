@@ -9,7 +9,7 @@ export type DeployFunction = (
 ) => Promise<{ [contractName: string]: string }>;
 
 const deployers: { [step: string]: DeployFunction } = {
-  deployMetaPool: deployMetaPool,
+  meta: deployMetaPool,
 };
 
 const makeConfigPath = (step: string, chainId: ICeloNetwork): string =>

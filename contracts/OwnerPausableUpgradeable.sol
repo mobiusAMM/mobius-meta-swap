@@ -2,8 +2,8 @@
 
 pragma solidity 0.6.12;
 
-import 'OpenZeppelin/openzeppelin-contracts-upgradeable@3.4.0/contracts/access/OwnableUpgradeable.sol';
-import 'OpenZeppelin/openzeppelin-contracts-upgradeable@3.4.0/contracts/utils/PausableUpgradeable.sol';
+import '@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol';
+import '@openzeppelin/contracts-upgradeable/utils/PausableUpgradeable.sol';
 
 
 /**

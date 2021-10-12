@@ -13,9 +13,10 @@ import "hardhat-watcher";
 import { HardhatUserConfig, task } from "hardhat/config";
 import { ActionType, HDAccountsUserConfig } from "hardhat/types";
 import "solidity-coverage";
+require("hardhat-deploy");
 
 task(
-  "deploy",
+  "deploy-contracts",
   "Deploys contracts",
   async (...args: Parameters<ActionType<{ step: string }>>) => {
     return await (await import("./tasks/deploy")).deploy(...args);
@@ -97,7 +98,7 @@ export default {
     ),
   },
   solidity: {
-    version: "0.8.1",
+    version: "0.6.12",
     settings: {
       optimizer: {
         enabled: true,
