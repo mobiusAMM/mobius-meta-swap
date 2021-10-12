@@ -1,0 +1,10 @@
+{
+  "name": "hardhat-project",
+  "devDependencies": {
+    "hardhat": "^2.6.5"
+  },
+  "dependencies": {
+    "@ubeswap/hardhat-celo": "^0.9.0",
+    "hardhat-preprocessor": "^0.1.4"
+  }
+}
