@@ -10,6 +10,9 @@ export const deployMetaPool: DeployFunction = async (env, args) => {
   //const kit = env.celo.kit;
   const { pooledTokens, decimals, lpTokenName, lpTokenSymbol, baseSwap } = args;
 
+  const pool = pooledTokens.split(",").map((s) => s.strip());
+  const decimalsSplit = decimals.split(",").map((s) => s.strip());
+
   // Default initialization values - these can be changed later
   const a = 50;
   const fee = Math.pow(10, 7); // 0.1% swap fee
@@ -26,8 +29,8 @@ export const deployMetaPool: DeployFunction = async (env, args) => {
   await doTx(
     "Initialize meta pool",
     metaPoolContract.initializeMetaSwap(
-      pooledTokens,
-      decimals,
+      pool,
+      decimalsSplit,
       lpTokenName,
       lpTokenSymbol,
       a,

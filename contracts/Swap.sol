@@ -287,6 +287,14 @@ contract Swap is OwnerPausableUpgradeable, ReentrancyGuardUpgradeable {
     }
 
     /**
+     * @notice Return balances of pooled tokens
+     * @return current balances of all tokens in pool
+     */
+    function getBalances() external view returns (uint256[] memory) {
+        return swapStorage.balances;
+    }
+
+    /**
      * @notice Get the virtual price, to help calculate profit
      * @return the virtual price, scaled to the POOL_PRECISION_DECIMALS
      */

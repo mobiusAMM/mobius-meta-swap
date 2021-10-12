@@ -22,7 +22,14 @@ task(
   }
 )
   .addParam("step", "The step to deploy")
-  .addParam("");
+  .addParam("pooledTokens", "Tokens in the pool")
+  .addParam("decimals", "token decimals")
+  .addParam("lpTokenName", "Name of the lp token for this swap")
+  .addParam("lpTokenSymbol", "Symbol for the lp token")
+  .addParam(
+    "baseSwap",
+    "Address of the base swap contract to be built on top of"
+  );
 
 // task(
 //   "liveTest",
